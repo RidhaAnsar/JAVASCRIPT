@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sort</title>
+</head>
+
+<body>
+    
+    <script>
+        var arr = [5, 3, 7, 8, 10];
+
+        // Sort the array in ascending order
+        arr.sort(function(a, b) {
+            return a - b;
+        });
+        console.log("Sorted array (ascending order):", arr);
+
+        // Sort the array in descending order
+        arr.sort(function(a, b) {
+            return b - a;
+        });
+
+        // Display the sorted array
+        console.log("Sorted array (descending order):", arr);
+    </script>
+</body>
+
+</html>
