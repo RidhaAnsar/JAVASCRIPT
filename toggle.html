@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Password Visibility Toggle</title>
+<style>
+    .container {
+        margin: 50px auto;
+        width: 300px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Password Visibility Toggle</h2>
+    <input type="password" id="passwordInput" placeholder="Enter your password">
+    <button id="toggleButton" onclick="toggleVisibility()">Show/Hide</button>
+</div>
+
+<script>
+function toggleVisibility() {
+    var passwordInput = document.getElementById("passwordInput");
+    var toggleButton = document.getElementById("toggleButton");
+
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleButton.textContent = "Hide";
+    } else {
+        passwordInput.type = "password";
+        toggleButton.textContent = "Show";
+    }
+}
+</script>
+
+</body>
+</html>
