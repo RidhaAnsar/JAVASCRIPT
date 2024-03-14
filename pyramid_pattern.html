@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pyramid Pattern</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<h2>Pyramid Pattern</h2>
+
+<script>
+    // Define the height of the pyramid
+    const height = 5;
+
+    // Outer loop for rows
+    for (let i = 1; i <= height; i++) {
+        // Inner loop for spaces before stars
+        for (let j = 1; j <= height - i; j++) {
+            document.write("&nbsp;");
+        }
+        // Inner loop for stars
+        for (let k = 1; k <= 2 * i - 1; k++) {
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+</script>
+
+</body>
+</html>
