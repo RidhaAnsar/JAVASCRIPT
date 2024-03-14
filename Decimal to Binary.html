@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decimal to Binary Converter</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Decimal to Binary Converter</h2>
+
+<label for="decimalInput">Enter a decimal number:</label>
+<input type="number" id="decimalInput">
+<button onclick="convertToBinary()">Convert</button>
+
+<p id="binaryOutput"></p>
+
+<script>
+function convertToBinary() {
+    // Get the decimal input value
+    var decimalInput = parseInt(document.getElementById("decimalInput").value);
+
+    // Convert decimal to binary
+    var binaryOutput = decimalInput.toString(2);
+
+    // Display the binary representation
+    document.getElementById("binaryOutput").textContent = "Binary: " + binaryOutput;
+}
+</script>
+
+</body>
+</html>
