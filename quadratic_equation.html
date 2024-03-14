@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quadratic Equation Solver</title>
+<style>
+    .container {
+        margin: 50px auto;
+        width: 300px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Quadratic Equation Solver</h2>
+    <label for="a">Enter coefficient a:</label>
+    <input type="number" id="a" placeholder="Enter a"><br><br>
+    <label for="b">Enter coefficient b:</label>
+    <input type="number" id="b" placeholder="Enter b"><br><br>
+    <label for="c">Enter coefficient c:</label>
+    <input type="number" id="c" placeholder="Enter c"><br><br>
+    <button onclick="solveQuadratic()">Solve</button><br><br>
+    <p id="solution"></p>
+</div>
+
+<script>
+function solveQuadratic() {
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+    var c = parseFloat(document.getElementById("c").value);
+
+    var discriminant = b * b - 4 * a * c;
+
+    if (a == 0) {
+        document.getElementById("solution").innerHTML = "This is not a quadratic equation.";
+    } else if (discriminant > 0) {
+        var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        document.getElementById("solution").innerHTML = "Roots are real and different: x1 = " + x1 + ", x2 = " + x2;
+    } else if (discriminant == 0) {
+        var x = -b / (2 * a);
+        document.getElementById("solution").innerHTML = "Roots are real and equal: x = " + x;
+    } else {
+        var realPart = -b / (2 * a);
+        var imaginaryPart = Math.sqrt(-discriminant) / (2 * a);
+        document.getElementById("solution").innerHTML = "Roots are complex: x1 = " + realPart + " + " + imaginaryPart + "i, x2 = " + realPart + " - " + imaginaryPart + "i";
+    }
+}
+</script>
+
+</body>
+</html>
